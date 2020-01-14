@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+require('dotenv').config()
 
 export default {
   mode: 'universal',
@@ -52,14 +53,14 @@ export default {
       'nuxt-fire',
       {
         config: {
-          apiKey: 'AIzaSyB3U4F4KVlsLM9SJGqnmZDzFo0WOUceGzU',
-          authDomain: 'nuxt-blog-c1774.firebaseapp.com',
-          databaseURL: 'https://nuxt-blog-c1774.firebaseio.com',
-          projectId: 'nuxt-blog-c1774',
-          storageBucket: 'nuxt-blog-c1774.appspot.com',
-          messagingSenderId: '18443098708',
-          appId: '1:18443098708:web:7f4119a2fdd888ebb2abc1',
-          measurementId: 'G-QHJ59JCKTM'
+          apiKey: process.env.FIREBASE_APIKEY,
+          authDomain: process.env.FIREBASE_AUTHDOMAIN,
+          databaseURL: process.env.FIREBASE_DATABASEURL,
+          projectId: process.env.FIREBASE_PROJECTID,
+          storageBucket: process.env.FIREBASE_STORAGEBUCKET,
+          messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
+          appId: process.env.FIREBASE_APPId,
+          measurementId: process.env.FIREBASE_MEASURENTID
         },
         services: {
           firestore: true,
