@@ -1,6 +1,7 @@
-# blog
-
-> Nuxt &amp; Firebase blog
+# blog 만들기
+ 
+> Nuxt &amp; Firebase blog  
+ https://nuxt-blog-c1774.web.app/
 
 ## Build Setup
 
@@ -19,4 +20,21 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## nuxt.config.js || firebase key
+```
+apiKey: process.env.FIREBASE_APIKEY,
+authDomain: process.env.FIREBASE_AUTHDOMAIN,
+databaseURL: process.env.FIREBASE_DATABASEURL,
+projectId: process.env.FIREBASE_PROJECTID,
+storageBucket: process.env.FIREBASE_STORAGEBUCKET,
+messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
+appId: process.env.FIREBASE_APPId,
+measurementId: process.env.FIREBASE_MEASURENTID
+```
+
+## 배포
+
+```
+npm run generate
+firebase deploy
+```

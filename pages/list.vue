@@ -4,15 +4,6 @@
       <v-toolbar color="success" dark flat>
         <v-toolbar-title>list</v-toolbar-title>
         <v-spacer />
-        <v-sheet class="mr-2" width="100" color="transparent">
-          <v-select
-            v-model="offset"
-            :items="[3,6,9]"
-            hide-details
-            solo-inverted
-            flat
-          />
-        </v-sheet>
         <v-sheet width="100" color="transparent">
           <v-select
             v-model="sortName"
@@ -82,6 +73,7 @@ export default {
       try {
         if (!this.items.length) {
           sn = await ref.get()
+          console.log(sn)
         } else {
           if (!this.last) return
           sn = await ref.startAfter(this.last).get()
